@@ -12,6 +12,9 @@ const APPS: { name: string; usage?: string; folder?: boolean }[] = [
 const THEME_INTERVAL_MS = 3200;
 const pad = (n: number) => String(n).padStart(2, '0');
 
+// The faded seconds either side of the current one are decoration, drawn as pseudo-element text.
+const DIM = 'h-[3.8cqw] opacity-[0.22] before:content-[attr(data-n)]';
+
 /**
  * The visitor's clock, ticking every second. It starts as null so the prerendered HTML and the
  * first client render match; the real time arrives in the effect.
@@ -85,9 +88,9 @@ const PhoneMockup: React.FC = () => {
               </div>
               <div className="h-[11.4cqw] overflow-hidden text-[3.3cqw] leading-[3.8cqw] tabular-nums">
                 <div key={second} className="motion-safe:animate-roll">
-                  <div className={fade} style={{ color: theme.fg, opacity: 0.22 }}>{pad((second + 59) % 60)}</div>
+                  <div data-n={pad((second + 59) % 60)} className={`${DIM} ${fade}`} style={{ color: theme.fg }} />
                   <div className={`font-medium ${fade}`} style={{ color: theme.accent }}>{pad(second)}</div>
-                  <div className={fade} style={{ color: theme.fg, opacity: 0.22 }}>{pad((second + 1) % 60)}</div>
+                  <div data-n={pad((second + 1) % 60)} className={`${DIM} ${fade}`} style={{ color: theme.fg }} />
                 </div>
               </div>
             </div>

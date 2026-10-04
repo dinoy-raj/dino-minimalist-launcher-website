@@ -95,7 +95,7 @@ function App() {
       <main id="top">
         {/* Hero */}
         <section className="flex min-h-[88vh] flex-col items-center justify-center px-4 pb-16 pt-24 text-center">
-          <div className="animate-fade-in-up flex flex-col items-center gap-4">
+          <div className="animate-rise flex flex-col items-center gap-4">
             <img
               src="/icon-192.png"
               alt="Dino Minimalist Launcher app icon"
@@ -106,7 +106,7 @@ function App() {
             />
             <p className="text-[18px] font-semibold tracking-tight sm:text-[22px]">Dino Minimalist Launcher</p>
           </div>
-          <h1 className="animate-fade-in-up animate-delay-100 mt-6 max-w-[16ch] text-[44px] font-bold leading-[1.02] tracking-[-0.045em] sm:text-[72px] lg:text-[92px]">
+          <h1 className="animate-rise animate-delay-100 mt-6 max-w-[16ch] text-[44px] font-bold leading-[1.02] tracking-[-0.045em] sm:text-[72px] lg:text-[92px]">
             The minimalist launcher
             <Glyph label="text list">
               <LayoutList strokeWidth={2.6} className="h-full w-full" />
@@ -117,13 +117,13 @@ function App() {
             </Glyph>
             back
           </h1>
-          <p className="animate-fade-in-up animate-delay-200 mt-8 max-w-[34ch] text-[18px] leading-relaxed text-neutral-500 sm:text-[20px]">
+          <p className="animate-rise animate-delay-200 mt-8 max-w-[34ch] text-[18px] leading-relaxed text-neutral-500 sm:text-[20px]">
             A free, ad-free minimal launcher for Android. A calm, text-only home screen that cuts distractions and screen time.
           </p>
-          <div className="animate-fade-in-up animate-delay-200 mt-10">
+          <div className="animate-rise animate-delay-200 mt-10">
             <DownloadButton />
           </div>
-          <div className="animate-fade-in-up animate-delay-300 mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+          <div className="animate-rise animate-delay-300 mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
             <Badge top="Rated on Google Play" bottom="4.8 ★" />
             <Badge top="Loved by" bottom="2.5K+ reviewers" />
           </div>

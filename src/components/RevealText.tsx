@@ -48,7 +48,7 @@ const RevealText: React.FC<{ text: string; className?: string }> = ({ text, clas
         <span
           key={i}
           className="transition-colors duration-300"
-          style={{ color: i < lit ? '#000' : '#d4d4d4' }}
+          style={{ color: i < lit ? '#000' : '#939393' }}
         >
           {word}{' '}
         </span>
