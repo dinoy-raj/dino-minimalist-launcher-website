@@ -71,3 +71,27 @@ export const FAQ: { q: string; a: string }[] = [
     a: 'Yes. Pin and reorder apps, hide apps from the list, change alignment, spacing and font size, pick from 12+ themes and 32+ fonts, and add only the widgets you want.',
   },
 ];
+
+/** Real screenshots of the launcher, one per theme. Also listed in the sitemap and structured data. */
+export const SCREENSHOTS: { src: string; theme: string; alt: string }[] = [
+  {
+    src: '/screenshots/dino-launcher-dark-theme.webp',
+    theme: 'Dark',
+    alt: 'Dino Minimalist Launcher home screen in the dark theme: a stacked clock above a plain text list of apps with screen time for each',
+  },
+  {
+    src: '/screenshots/dino-launcher-light-theme.webp',
+    theme: 'Light',
+    alt: 'Dino Minimalist Launcher home screen in the light theme: black text on white with a stacked clock and app list',
+  },
+  {
+    src: '/screenshots/dino-launcher-red-theme.webp',
+    theme: 'Red',
+    alt: 'Dino Minimalist Launcher home screen in the red theme: a red clock on black above a white text list of apps',
+  },
+  {
+    src: '/screenshots/dino-launcher-sand-theme.webp',
+    theme: 'Sand',
+    alt: 'Dino Minimalist Launcher home screen in the sand theme: a warm beige background with a copper clock and brown app names',
+  },
+];

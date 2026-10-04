@@ -6,5 +6,17 @@
     <image:image>
       <image:loc>https://minimalistlauncher.com/og-image.png</image:loc>
     </image:image>
+    <image:image>
+      <image:loc>https://minimalistlauncher.com/screenshots/dino-launcher-dark-theme.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://minimalistlauncher.com/screenshots/dino-launcher-light-theme.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://minimalistlauncher.com/screenshots/dino-launcher-red-theme.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://minimalistlauncher.com/screenshots/dino-launcher-sand-theme.webp</image:loc>
+    </image:image>
   </url>
 </urlset>
