@@ -1,71 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Doto:wght@500;700&family=Instrument+Serif&family=JetBrains+Mono:wght@400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
+  background: #fff;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-feature-settings: 'ss01', 'cv11';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 3D Cube Rotation */
-.cube-wrapper {
-  display: inline-block;
-  vertical-align: baseline;
-  height: 1em;
-  perspective: 1000px;
-  width: 5.8em; /* Adjusted for typical word length of minimalist/productive */
-  position: relative;
-}
-
-.cube {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform-style: preserve-3d;
-  animation: rotateCube 4s infinite ease-in-out;
-  top: 0;
-  left: 0;
-}
-
-.cube-face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  white-space: nowrap;
-  backface-visibility: hidden;
-}
-
-/* Faces arranged in a box.
-   Distance from center is half of height (1em / 2 = 0.5em)
-*/
-.face-front {
-  transform: rotateX(0deg) translateZ(0.5em);
-}
-.face-top {
-  transform: rotateX(90deg) translateZ(0.5em);
-}
-
-@keyframes rotateCube {
-  0%, 45% {
-    transform: rotateX(0deg);
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-  50%, 95% {
-    transform: rotateX(-90deg);
-  }
-  100% {
-    transform: rotateX(0deg);
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
   }
 }
