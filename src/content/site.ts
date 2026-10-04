@@ -56,7 +56,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'Can a minimal launcher really reduce screen time?',
-    a: 'A minimal launcher removes the bright icons and badges that invite mindless taps, so opening an app becomes a choice. Dino adds a mindful pause, an app and site blocker and usage insights so you can see the difference for yourself.',
+    a: 'A minimal launcher removes the bright icons and badges that invite mindless taps, so opening an app becomes a choice. Dino adds a mindful pause, an app and site blocker and usage insights so you can see the difference for yourself. More ideas in [how to reduce screen time on Android](/guides/reduce-screen-time-on-android).',
   },
   {
     q: 'Which phones does Dino work on?',
@@ -64,10 +64,34 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'How do I set Dino as my default launcher, and switch back?',
-    a: 'Install Dino from Google Play, press the Home button and choose Dino, or open Settings → Apps → Default apps → Home app. To switch back, pick your previous launcher in the same place. Your apps and data are not touched.',
+    a: 'Install Dino from Google Play, press the Home button and choose Dino, or open Settings → Apps → Default apps → Home app. To switch back, pick your previous launcher in the same place. Your apps and data are not touched. See the [step-by-step guide for every phone brand](/guides/set-default-launcher-android).',
   },
   {
     q: 'Can I still customise a minimalist launcher?',
     a: 'Yes. Pin and reorder apps, hide apps from the list, change alignment, spacing and font size, pick from 12+ themes and 32+ fonts, and add only the widgets you want.',
+  },
+];
+
+/** Real screenshots of the launcher, one per theme. Also listed in the sitemap and structured data. */
+export const SCREENSHOTS: { src: string; theme: string; alt: string }[] = [
+  {
+    src: '/screenshots/dino-launcher-dark-theme.webp',
+    theme: 'Dark',
+    alt: 'Dino Minimalist Launcher home screen in the dark theme: a stacked clock above a plain text list of apps with screen time for each',
+  },
+  {
+    src: '/screenshots/dino-launcher-light-theme.webp',
+    theme: 'Light',
+    alt: 'Dino Minimalist Launcher home screen in the light theme: black text on white with a stacked clock and app list',
+  },
+  {
+    src: '/screenshots/dino-launcher-red-theme.webp',
+    theme: 'Red',
+    alt: 'Dino Minimalist Launcher home screen in the red theme: a red clock on black above a white text list of apps',
+  },
+  {
+    src: '/screenshots/dino-launcher-sand-theme.webp',
+    theme: 'Sand',
+    alt: 'Dino Minimalist Launcher home screen in the sand theme: a warm beige background with a copper clock and brown app names',
   },
 ];

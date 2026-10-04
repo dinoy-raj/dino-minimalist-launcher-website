@@ -4,9 +4,15 @@
   "trailingSlash": false,
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/",
       "has": [{ "type": "host", "value": "www.minimalistlauncher.com" }],
-      "destination": "https://minimalistlauncher.com/:path*",
+      "destination": "https://minimalistlauncher.com/",
+      "permanent": true
+    },
+    {
+      "source": "/:path+",
+      "has": [{ "type": "host", "value": "www.minimalistlauncher.com" }],
+      "destination": "https://minimalistlauncher.com/:path+",
       "permanent": true
     }
   ],
