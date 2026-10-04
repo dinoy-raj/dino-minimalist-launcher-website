@@ -19,4 +19,16 @@
       <image:loc>https://minimalistlauncher.com/screenshots/dino-launcher-sand-theme.webp</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://minimalistlauncher.com/guides</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://minimalistlauncher.com/guides/reduce-screen-time-on-android</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://minimalistlauncher.com/guides/set-default-launcher-android</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
 </urlset>

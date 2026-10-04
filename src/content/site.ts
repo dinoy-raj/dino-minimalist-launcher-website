@@ -56,7 +56,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'Can a minimal launcher really reduce screen time?',
-    a: 'A minimal launcher removes the bright icons and badges that invite mindless taps, so opening an app becomes a choice. Dino adds a mindful pause, an app and site blocker and usage insights so you can see the difference for yourself.',
+    a: 'A minimal launcher removes the bright icons and badges that invite mindless taps, so opening an app becomes a choice. Dino adds a mindful pause, an app and site blocker and usage insights so you can see the difference for yourself. More ideas in [how to reduce screen time on Android](/guides/reduce-screen-time-on-android).',
   },
   {
     q: 'Which phones does Dino work on?',
@@ -64,7 +64,7 @@ export const FAQ: { q: string; a: string }[] = [
   },
   {
     q: 'How do I set Dino as my default launcher, and switch back?',
-    a: 'Install Dino from Google Play, press the Home button and choose Dino, or open Settings → Apps → Default apps → Home app. To switch back, pick your previous launcher in the same place. Your apps and data are not touched.',
+    a: 'Install Dino from Google Play, press the Home button and choose Dino, or open Settings → Apps → Default apps → Home app. To switch back, pick your previous launcher in the same place. Your apps and data are not touched. See the [step-by-step guide for every phone brand](/guides/set-default-launcher-android).',
   },
   {
     q: 'Can I still customise a minimalist launcher?',

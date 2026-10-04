@@ -1,33 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Hourglass, LayoutList } from 'lucide-react';
+import DownloadButton from './components/DownloadButton';
 import Faq from './components/Faq';
 import Features from './components/Features';
 import Glyph from './components/Glyph';
+import GuideCards from './components/GuideCards';
 import PhoneMockup from './components/PhoneMockup';
 import RevealText from './components/RevealText';
-import { AUTHOR_URL, COMMUNITY_URL, PLAY_URL, ROADMAP_URL } from './content/site';
-
-const PlayIcon: React.FC<{ className?: string }> = ({ className }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.61 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.92 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-  </svg>
-);
-
-const DownloadButton: React.FC<{ size?: 'lg' | 'sm' }> = ({ size = 'lg' }) => (
-  <a
-    href={PLAY_URL}
-    target="_blank"
-    rel="noopener noreferrer"
-    className={
-      size === 'lg'
-        ? 'inline-flex items-center gap-3 rounded-[18px] bg-black px-7 py-[18px] text-[17px] font-semibold text-white transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]'
-        : 'inline-flex items-center gap-2 rounded-full bg-black px-4 py-[10px] text-[14px] font-semibold text-white transition-transform duration-200 hover:scale-[1.03]'
-    }
-  >
-    <PlayIcon className={size === 'lg' ? 'h-5 w-5' : 'h-4 w-4'} />
-    {size === 'lg' ? 'Get it on Google Play' : 'Download'}
-  </a>
-);
+import SiteFooter from './components/SiteFooter';
+import SiteHeader from './components/SiteHeader';
 
 // Leaves placed along the left half of a circle, each tilted off the tangent.
 const LEAVES = [0, 1, 2, 3, 4, 5].map((i) => {
@@ -57,40 +38,9 @@ const Badge: React.FC<{ top: string; bottom: string }> = ({ top, bottom }) => (
 const STATEMENT = 'text-[34px] font-bold leading-[1.08] tracking-[-0.04em] sm:text-[56px] lg:text-[68px]';
 
 function App() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.6);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
   return (
     <div className="min-h-screen bg-white text-black">
-      {/* Floating pill nav, shown once the hero scrolls away */}
-      <header
-        className={`fixed inset-x-3 top-3 z-50 mx-auto flex max-w-[1360px] items-center justify-between rounded-full border border-black/[0.04] bg-white/80 py-2 pl-6 pr-2 backdrop-blur-xl transition-all duration-500 sm:inset-x-6 sm:top-5 ${
-          scrolled ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-4 opacity-0'
-        }`}
-      >
-        <a href="#top" className="flex items-center gap-2.5 text-[22px] font-bold tracking-tight">
-          <img src="/favicon.svg" alt="" width={28} height={28} className="h-7 w-7 rounded-[7px]" />
-          Dino
-        </a>
-        <nav className="flex items-center gap-2 sm:gap-6">
-          <a href="#features" className="hidden text-[15px] font-semibold sm:block">
-            Features
-          </a>
-          <a href="#faq" className="hidden text-[15px] font-semibold sm:block">
-            FAQ
-          </a>
-          <a href={ROADMAP_URL} target="_blank" rel="noopener noreferrer" className="hidden text-[15px] font-semibold md:block">
-            Roadmap
-          </a>
-          <DownloadButton size="sm" />
-        </nav>
-      </header>
+      <SiteHeader revealOnScroll />
 
       <main id="top">
         {/* Hero */}
@@ -155,6 +105,17 @@ function App() {
 
         <Features />
 
+        {/* Guides */}
+        <section id="guides" className="mx-auto max-w-[1040px] scroll-mt-28 px-5 pt-32 sm:pt-40">
+          <h2 className="text-center text-[34px] font-bold leading-[1.05] tracking-[-0.04em] sm:text-[56px]">Guides to a calmer phone</h2>
+          <p className="mx-auto mt-6 max-w-[46ch] text-center text-[17px] leading-relaxed text-neutral-500">
+            Step-by-step help for spending less time on your phone. <a href="/guides" className="font-semibold text-black underline decoration-black/25 underline-offset-[3px] hover:decoration-black">See all guides</a>
+          </p>
+          <div className="mt-12">
+            <GuideCards headingLevel="h3" />
+          </div>
+        </section>
+
         <Faq />
 
         <section className="flex justify-center px-4 pb-32">
@@ -162,24 +123,7 @@ function App() {
         </section>
       </main>
 
-      <footer className="pb-20 text-center">
-        <div className="text-[26px] font-bold tracking-tight text-neutral-500">Dino Minimalist Launcher</div>
-        <nav className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 text-[17px] font-semibold text-neutral-500">
-          <a href={PLAY_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Google Play</a>
-          <span aria-hidden="true">•</span>
-          <a href={ROADMAP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Roadmap</a>
-          <span aria-hidden="true">•</span>
-          <a href="#faq" className="hover:text-black">FAQ</a>
-          <span aria-hidden="true">•</span>
-          <a href={COMMUNITY_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Community</a>
-        </nav>
-        <p className="mt-4 text-[14px] font-semibold text-neutral-500">
-          Crafted by{' '}
-          <a href={AUTHOR_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">
-            Dinoy
-          </a>
-        </p>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

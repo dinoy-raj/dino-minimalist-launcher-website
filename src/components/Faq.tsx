@@ -1,5 +1,9 @@
 import React from 'react';
 import { FAQ } from '../content/site';
+import RichText from './RichText';
+
+// Structured data takes plain text: keep a link's label, drop its target.
+const plain = (text: string) => text.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1');
 
 const faqSchema = {
   '@context': 'https://schema.org',
@@ -7,7 +11,7 @@ const faqSchema = {
   mainEntity: FAQ.map(({ q, a }) => ({
     '@type': 'Question',
     name: q,
-    acceptedAnswer: { '@type': 'Answer', text: a },
+    acceptedAnswer: { '@type': 'Answer', text: plain(a) },
   })),
 };
 
@@ -24,7 +28,9 @@ const Faq: React.FC = () => (
               +
             </span>
           </summary>
-          <p className="mt-3 max-w-[64ch] text-[17px] leading-relaxed text-neutral-500">{a}</p>
+          <p className="mt-3 max-w-[64ch] text-[17px] leading-relaxed text-neutral-500">
+            <RichText text={a} />
+          </p>
         </details>
       ))}
     </div>
