@@ -4,7 +4,6 @@ import Faq from './components/Faq';
 import Features from './components/Features';
 import Glyph from './components/Glyph';
 import PhoneMockup from './components/PhoneMockup';
-import { THEMES } from './components/themes';
 import RevealText from './components/RevealText';
 import { AUTHOR_URL, COMMUNITY_URL, PLAY_URL, ROADMAP_URL } from './content/site';
 
@@ -60,7 +59,6 @@ const STATEMENT = 'text-[34px] font-bold leading-[1.08] tracking-[-0.04em] sm:te
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
-  const [themeIndex, setThemeIndex] = useState(0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.6);
@@ -77,7 +75,8 @@ function App() {
           scrolled ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-4 opacity-0'
         }`}
       >
-        <a href="#top" className="text-[22px] font-bold tracking-tight">
+        <a href="#top" className="flex items-center gap-2.5 text-[22px] font-bold tracking-tight">
+          <img src="/favicon.svg" alt="" className="h-7 w-7" />
           Dino
         </a>
         <nav className="flex items-center gap-2 sm:gap-6">
@@ -116,7 +115,7 @@ function App() {
             <DownloadButton />
           </div>
           <div className="animate-fade-in-up animate-delay-300 mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            <Badge top="Rated on Google Play" bottom="4.5 ★" />
+            <Badge top="Rated on Google Play" bottom="4.8 ★" />
             <Badge top="Loved by" bottom="2.5K+ reviewers" />
           </div>
         </section>
@@ -124,23 +123,8 @@ function App() {
         {/* Product panel */}
         <section className="px-3 sm:px-[72px]">
           <div className="mx-auto max-w-[1296px] rounded-[40px] bg-[#fafafa] px-4 pb-14 pt-20 sm:rounded-[56px] sm:pt-28">
-            <PhoneMockup theme={THEMES[themeIndex]} />
-            <div className="mt-12 flex flex-wrap justify-center gap-2" role="radiogroup" aria-label="Preview theme">
-              {THEMES.map((t, i) => (
-                <button
-                  key={t.id}
-                  role="radio"
-                  aria-checked={i === themeIndex}
-                  onClick={() => setThemeIndex(i)}
-                  className={`rounded-full px-4 py-2 text-[14px] font-semibold transition-colors ${
-                    i === themeIndex ? 'bg-black text-white' : 'bg-black/[0.05] text-neutral-500 hover:text-black'
-                  }`}
-                >
-                  {t.name}
-                </button>
-              ))}
-            </div>
-            <p className="mt-4 text-center text-[13px] text-neutral-400">12+ themes and 32+ fonts in the app. Tap to preview a few.</p>
+            <PhoneMockup />
+            <p className="mt-3 text-center text-[13px] text-neutral-400">12+ themes and 32+ fonts in the app. Here are a few.</p>
           </div>
         </section>
 

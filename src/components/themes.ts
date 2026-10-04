@@ -1,17 +1,23 @@
+/** Colours sampled from the launcher's own stacked-clock home screen in each theme. */
 export type PhoneTheme = {
   id: string;
   name: string;
   bg: string;
+  /** Clock digits and the current second. */
+  accent: string;
+  /** App labels and the date. */
   fg: string;
+  /** Bullets and usage times. */
   muted: string;
-  font: string;
-  upper?: boolean;
+  pillBg: string;
+  pillFg: string;
+  /** The gesture bar at the bottom of the screen. */
+  bar: string;
 };
 
 export const THEMES: PhoneTheme[] = [
-  { id: 'light', name: 'Light', bg: '#ffffff', fg: '#0a0a0a', muted: '#a3a3a3', font: "'Inter', sans-serif" },
-  { id: 'dark', name: 'Dark', bg: '#0a0a0a', fg: '#fafafa', muted: '#6b6b6b', font: "'Inter', sans-serif" },
-  { id: 'nothing', name: 'Nothing', bg: '#000000', fg: '#ffffff', muted: '#ff3b30', font: "'Doto', monospace", upper: true },
-  { id: 'serif', name: 'Paper', bg: '#f4efe6', fg: '#2b2620', muted: '#9c907f', font: "'Instrument Serif', serif" },
-  { id: 'mono', name: 'Mono', bg: '#e9e9e9', fg: '#3a3a3a', muted: '#9a9a9a', font: "'JetBrains Mono', monospace" },
+  { id: 'dark', name: 'Dark', bg: '#000000', accent: '#ffffff', fg: '#ffffff', muted: '#8c8c8c', pillBg: '#3a3a3a', pillFg: '#ffffff', bar: '#ffffff' },
+  { id: 'light', name: 'Light', bg: '#ffffff', accent: '#000000', fg: '#111111', muted: '#8c8c8c', pillBg: '#3a3a3a', pillFg: '#ffffff', bar: '#555555' },
+  { id: 'red', name: 'Red', bg: '#000000', accent: '#df1c25', fg: '#ffffff', muted: '#8c8c8c', pillBg: '#262626', pillFg: '#df1c25', bar: '#ffffff' },
+  { id: 'sand', name: 'Sand', bg: '#f2e9d8', accent: '#b6662f', fg: '#4a3826', muted: '#a39684', pillBg: '#6b5440', pillFg: '#f2e9d8', bar: '#5c4a38' },
 ];
