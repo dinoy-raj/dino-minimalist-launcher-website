@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter Variable', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Inter Variable', 'Inter Fallback Arial', 'Inter Fallback Roboto', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

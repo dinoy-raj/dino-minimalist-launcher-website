@@ -56,12 +56,16 @@ function App() {
             />
             <p className="text-[18px] font-semibold tracking-tight sm:text-[22px]">Dino Minimalist Launcher</p>
           </div>
-          <h1 className="animate-rise animate-delay-100 mt-6 max-w-[16ch] text-[44px] font-bold leading-[1.02] tracking-[-0.045em] sm:text-[72px] lg:text-[92px]">
+          {/* Fixed line breaks on wide screens: a ch-based width there re-wrapped the headline when
+              Inter swapped in for the fallback font, shifting the whole page (CLS). */}
+          <h1 className="animate-rise animate-delay-100 mt-6 max-w-[16ch] text-[44px] font-bold leading-[1.02] tracking-[-0.045em] sm:text-[72px] lg:text-[92px] xl:max-w-none">
             The minimalist launcher
+            <br className="hidden xl:inline" />
             <Glyph label="text list">
               <LayoutList strokeWidth={2.6} className="h-full w-full" />
             </Glyph>
-            that gives you your time
+            that gives you your
+            <br className="hidden xl:inline" /> time
             <Glyph label="hourglass">
               <Hourglass strokeWidth={2.6} className="h-full w-full" />
             </Glyph>
