@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Focus, Hourglass, LayoutList } from 'lucide-react';
+import { Hourglass, LayoutList } from 'lucide-react';
+import Faq from './components/Faq';
+import Features from './components/Features';
 import Glyph from './components/Glyph';
 import PhoneMockup from './components/PhoneMockup';
 import { THEMES } from './components/themes';
 import RevealText from './components/RevealText';
-
-const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.dino.simple&pcampaignid=web_share';
-const ROADMAP_URL = 'https://puzzle-kettle-30f.notion.site/Simple-Launcher-182b8c4aae1f80d8941df2086b1caf73';
-const COMMUNITY_URL = 'https://linktr.ee/simple.launcher';
-const AUTHOR_URL = 'https://linktr.ee/dinoyraj';
+import { AUTHOR_URL, COMMUNITY_URL, PLAY_URL, ROADMAP_URL } from './content/site';
 
 const PlayIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -21,6 +19,7 @@ const DownloadButton: React.FC<{ size?: 'lg' | 'sm' }> = ({ size = 'lg' }) => (
     href={PLAY_URL}
     target="_blank"
     rel="noopener noreferrer"
+    aria-label="Get Dino Minimalist Launcher on Google Play"
     className={
       size === 'lg'
         ? 'inline-flex items-center gap-3 rounded-[18px] bg-black px-7 py-[18px] text-[17px] font-semibold text-white transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]'
@@ -82,11 +81,14 @@ function App() {
           Dino
         </a>
         <nav className="flex items-center gap-2 sm:gap-6">
-          <a href={ROADMAP_URL} target="_blank" rel="noopener noreferrer" className="hidden text-[15px] font-semibold sm:block">
-            Roadmap
+          <a href="#features" className="hidden text-[15px] font-semibold sm:block">
+            Features
           </a>
-          <a href={COMMUNITY_URL} target="_blank" rel="noopener noreferrer" className="hidden text-[15px] font-semibold sm:block">
-            Community
+          <a href="#faq" className="hidden text-[15px] font-semibold sm:block">
+            FAQ
+          </a>
+          <a href={ROADMAP_URL} target="_blank" rel="noopener noreferrer" className="hidden text-[15px] font-semibold md:block">
+            Roadmap
           </a>
           <DownloadButton size="sm" />
         </nav>
@@ -96,22 +98,21 @@ function App() {
         {/* Hero */}
         <section className="flex min-h-[88vh] flex-col items-center justify-center px-4 pb-16 pt-24 text-center">
           <p className="animate-fade-in-up text-[18px] font-semibold tracking-tight sm:text-[22px]">Dino Minimalist Launcher</p>
-          <h1 className="animate-fade-in-up animate-delay-100 mt-6 max-w-[15ch] text-[44px] font-bold leading-[1.02] tracking-[-0.045em] sm:text-[72px] lg:text-[92px]">
-            The home screen
+          <h1 className="animate-fade-in-up animate-delay-100 mt-6 max-w-[16ch] text-[44px] font-bold leading-[1.02] tracking-[-0.045em] sm:text-[72px] lg:text-[92px]">
+            The minimalist launcher
             <Glyph label="text list">
               <LayoutList strokeWidth={2.6} className="h-full w-full" />
             </Glyph>
-            that gives
-            <Glyph label="focus">
-              <Focus strokeWidth={2.6} className="h-full w-full" />
-            </Glyph>
-            you your time
+            that gives you your time
             <Glyph label="hourglass">
               <Hourglass strokeWidth={2.6} className="h-full w-full" />
             </Glyph>
             back
           </h1>
-          <div className="animate-fade-in-up animate-delay-200 mt-12">
+          <p className="animate-fade-in-up animate-delay-200 mt-8 max-w-[34ch] text-[18px] leading-relaxed text-neutral-500 sm:text-[20px]">
+            A free, ad-free minimal launcher for Android. A calm, text-only home screen that cuts distractions and screen time.
+          </p>
+          <div className="animate-fade-in-up animate-delay-200 mt-10">
             <DownloadButton />
           </div>
           <div className="animate-fade-in-up animate-delay-300 mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
@@ -159,17 +160,23 @@ function App() {
           />
         </section>
 
+        <Features />
+
+        <Faq />
+
         <section className="flex justify-center px-4 pb-32">
           <DownloadButton />
         </section>
       </main>
 
       <footer className="pb-20 text-center">
-        <div className="text-[26px] font-bold tracking-tight text-neutral-200">Dino</div>
+        <div className="text-[26px] font-bold tracking-tight text-neutral-200">Dino Minimalist Launcher</div>
         <nav className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 text-[17px] font-semibold text-neutral-400">
           <a href={PLAY_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Google Play</a>
           <span aria-hidden="true">•</span>
           <a href={ROADMAP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Roadmap</a>
+          <span aria-hidden="true">•</span>
+          <a href="#faq" className="hover:text-black">FAQ</a>
           <span aria-hidden="true">•</span>
           <a href={COMMUNITY_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Community</a>
         </nav>
