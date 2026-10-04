@@ -2,47 +2,99 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Dino Minimalist Launcher for Android</title>
-    <meta name="description" content="Dino Minimalist Launcher is a calm, text-first home screen for Android. Distraction-free, ad-free and highly customisable, designed to reduce screen time and boost focus. Download on Google Play.">
-    <meta name="keywords" content="dino launcher, minimalist launcher, minimal launcher, simple launcher, android launcher, uncluttered launcher, distraction free launcher, productivity launcher, clean launcher">
-    <meta name="author" content="dinoo">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Dino Minimalist Launcher for Android">
-    <meta property="og:description" content="A calm, text-first home screen for Android. Distraction-free and designed to reduce screen time and boost focus.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://minimalistlauncher.com/">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Dino Minimalist Launcher for Android">
-    <meta name="twitter:description" content="A calm, text-first home screen for Android. Distraction-free and designed to reduce screen time and boost focus.">
-    
-    <!-- Additional SEO -->
-    <meta name="robots" content="index, follow">
+
+    <!-- App icon: the launcher's own logo -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/icon-192.png" as="image" fetchpriority="high" />
+    <meta name="application-name" content="Dino Minimalist Launcher">
+    <meta name="apple-mobile-web-app-title" content="Dino">
+
+    <!-- SEO -->
+    <title>Dino Minimalist Launcher – Minimal Android Home Screen</title>
+    <meta name="description" content="Dino is a free, ad-free minimalist launcher for Android. A calm, text-only minimal home screen with focus tools, app blocker and 12+ themes to cut screen time.">
+    <meta name="author" content="Dinoy Raj">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="theme-color" content="#ffffff">
     <link rel="canonical" href="https://minimalistlauncher.com/">
-    
-    <!-- Structured Data -->
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Dino Minimalist Launcher">
+    <meta property="og:title" content="Dino Minimalist Launcher – Minimal Android Home Screen">
+    <meta property="og:description" content="A free, ad-free minimalist launcher for Android. A calm, text-only home screen that cuts distractions and screen time.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://minimalistlauncher.com/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://minimalistlauncher.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dino Minimalist Launcher: a text-only Android home screen">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dino Minimalist Launcher – Minimal Android Home Screen">
+    <meta name="twitter:description" content="A free, ad-free minimalist launcher for Android. A calm, text-only home screen that cuts distractions and screen time.">
+    <meta name="twitter:image" content="https://minimalistlauncher.com/og-image.png">
+
+    <!-- Structured data (the FAQ's lives next to it in the page body) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MobileApplication",
-      "name": "Dino Minimalist Launcher",
-      "description": "A calm, text-first minimalist home screen for Android",
-      "url": "https://minimalistlauncher.com/",
-      "applicationCategory": "Productivity",
-      "operatingSystem": "Android",
-      "downloadUrl": "https://play.google.com/store/apps/details?id=com.dino.simple&pcampaignid=web_share",
-      "keywords": "dino launcher, minimalist launcher, minimal launcher, simple launcher, android launcher, uncluttered launcher",
-      "author": {
-        "@type": "Person",
-        "name": "dinoo"
-      }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://minimalistlauncher.com/#organization",
+          "name": "Dino Minimalist Launcher",
+          "url": "https://minimalistlauncher.com/",
+          "logo": "https://minimalistlauncher.com/icon-512.png",
+          "founder": { "@type": "Person", "name": "Dinoy Raj", "url": "https://linktr.ee/dinoyraj" },
+          "sameAs": [
+            "https://play.google.com/store/apps/details?id=com.dino.simple",
+            "https://linktr.ee/simple.launcher"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://minimalistlauncher.com/#website",
+          "name": "Dino Minimalist Launcher",
+          "alternateName": ["Dino Launcher", "Simple Launcher"],
+          "url": "https://minimalistlauncher.com/",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://minimalistlauncher.com/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://minimalistlauncher.com/#webpage",
+          "url": "https://minimalistlauncher.com/",
+          "name": "Dino Minimalist Launcher – Minimal Android Home Screen",
+          "isPartOf": { "@id": "https://minimalistlauncher.com/#website" },
+          "about": { "@id": "https://minimalistlauncher.com/#app" },
+          "primaryImageOfPage": "https://minimalistlauncher.com/og-image.png",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://minimalistlauncher.com/#app",
+          "name": "Dino Minimalist Launcher",
+          "alternateName": ["Dino Launcher", "Simple Launcher: Minimalist"],
+          "description": "A free, ad-free minimalist launcher for Android: a calm, text-only minimal home screen with focus tools, an app blocker, themes and fonts to reduce screen time.",
+          "url": "https://minimalistlauncher.com/",
+          "image": "https://minimalistlauncher.com/og-image.png",
+          "screenshot": "https://minimalistlauncher.com/og-image.png",
+          "publisher": { "@id": "https://minimalistlauncher.com/#organization" },
+          "applicationCategory": "LifestyleApplication",
+          "applicationSubCategory": "Launcher",
+          "operatingSystem": "Android 8.0 or later",
+          "installUrl": "https://play.google.com/store/apps/details?id=com.dino.simple",
+          "downloadUrl": "https://play.google.com/store/apps/details?id=com.dino.simple",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "2500", "bestRating": "5" },
+          "author": { "@type": "Person", "name": "Dinoy Raj", "url": "https://linktr.ee/dinoyraj" }
+        }
+      ]
     }
     </script>
   </head>

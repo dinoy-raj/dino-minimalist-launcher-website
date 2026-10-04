@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Doto:wght@500;700&family=Instrument+Serif&family=JetBrains+Mono:wght@400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +8,7 @@ html {
 
 body {
   background: #fff;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   font-feature-settings: 'ss01', 'cv11';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

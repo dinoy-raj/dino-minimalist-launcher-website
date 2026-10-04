@@ -43,11 +43,10 @@ const RevealText: React.FC<{ text: string; className?: string }> = ({ text, clas
   const lit = Math.round(progress * words.length);
 
   return (
-    <p ref={ref} className={className} aria-label={text}>
+    <p ref={ref} className={className}>
       {words.map((word, i) => (
         <span
           key={i}
-          aria-hidden="true"
           className="transition-colors duration-300"
           style={{ color: i < lit ? '#000' : '#d4d4d4' }}
         >

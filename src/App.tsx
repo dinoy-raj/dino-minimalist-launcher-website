@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Focus, Hourglass, LayoutList } from 'lucide-react';
+import { Hourglass, LayoutList } from 'lucide-react';
+import Faq from './components/Faq';
+import Features from './components/Features';
 import Glyph from './components/Glyph';
 import PhoneMockup from './components/PhoneMockup';
-import { THEMES } from './components/themes';
 import RevealText from './components/RevealText';
-
-const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.dino.simple&pcampaignid=web_share';
-const ROADMAP_URL = 'https://puzzle-kettle-30f.notion.site/Simple-Launcher-182b8c4aae1f80d8941df2086b1caf73';
-const COMMUNITY_URL = 'https://linktr.ee/simple.launcher';
-const AUTHOR_URL = 'https://linktr.ee/dinoyraj';
+import { AUTHOR_URL, COMMUNITY_URL, PLAY_URL, ROADMAP_URL } from './content/site';
 
 const PlayIcon: React.FC<{ className?: string }> = ({ className }) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -50,8 +47,8 @@ const Badge: React.FC<{ top: string; bottom: string }> = ({ top, bottom }) => (
   <div className="flex items-center gap-2">
     <Laurel />
     <div className="text-center leading-tight">
-      <div className="text-[13px] font-medium text-neutral-400">{top}</div>
-      <div className="text-[20px] font-semibold tracking-tight text-neutral-400">{bottom}</div>
+      <div className="text-[13px] font-medium text-neutral-500">{top}</div>
+      <div className="text-[20px] font-semibold tracking-tight text-neutral-500">{bottom}</div>
     </div>
     <Laurel flip />
   </div>
@@ -61,7 +58,6 @@ const STATEMENT = 'text-[34px] font-bold leading-[1.08] tracking-[-0.04em] sm:te
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
-  const [themeIndex, setThemeIndex] = useState(0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.6);
@@ -78,15 +74,19 @@ function App() {
           scrolled ? 'translate-y-0 opacity-100' : 'pointer-events-none -translate-y-4 opacity-0'
         }`}
       >
-        <a href="#top" className="text-[22px] font-bold tracking-tight">
+        <a href="#top" className="flex items-center gap-2.5 text-[22px] font-bold tracking-tight">
+          <img src="/favicon.svg" alt="" width={28} height={28} className="h-7 w-7 rounded-[7px]" />
           Dino
         </a>
         <nav className="flex items-center gap-2 sm:gap-6">
-          <a href={ROADMAP_URL} target="_blank" rel="noopener noreferrer" className="hidden text-[15px] font-semibold sm:block">
-            Roadmap
+          <a href="#features" className="hidden text-[15px] font-semibold sm:block">
+            Features
           </a>
-          <a href={COMMUNITY_URL} target="_blank" rel="noopener noreferrer" className="hidden text-[15px] font-semibold sm:block">
-            Community
+          <a href="#faq" className="hidden text-[15px] font-semibold sm:block">
+            FAQ
+          </a>
+          <a href={ROADMAP_URL} target="_blank" rel="noopener noreferrer" className="hidden text-[15px] font-semibold md:block">
+            Roadmap
           </a>
           <DownloadButton size="sm" />
         </nav>
@@ -95,27 +95,36 @@ function App() {
       <main id="top">
         {/* Hero */}
         <section className="flex min-h-[88vh] flex-col items-center justify-center px-4 pb-16 pt-24 text-center">
-          <p className="animate-fade-in-up text-[18px] font-semibold tracking-tight sm:text-[22px]">Dino Minimalist Launcher</p>
-          <h1 className="animate-fade-in-up animate-delay-100 mt-6 max-w-[15ch] text-[44px] font-bold leading-[1.02] tracking-[-0.045em] sm:text-[72px] lg:text-[92px]">
-            The home screen
+          <div className="animate-fade-in-up flex flex-col items-center gap-4">
+            <img
+              src="/icon-192.png"
+              alt="Dino Minimalist Launcher app icon"
+              width={72}
+              height={72}
+              fetchPriority="high"
+              className="h-[72px] w-[72px] rounded-[18px] shadow-[0_12px_30px_-10px_rgba(0,0,0,0.45)]"
+            />
+            <p className="text-[18px] font-semibold tracking-tight sm:text-[22px]">Dino Minimalist Launcher</p>
+          </div>
+          <h1 className="animate-fade-in-up animate-delay-100 mt-6 max-w-[16ch] text-[44px] font-bold leading-[1.02] tracking-[-0.045em] sm:text-[72px] lg:text-[92px]">
+            The minimalist launcher
             <Glyph label="text list">
               <LayoutList strokeWidth={2.6} className="h-full w-full" />
             </Glyph>
-            that gives
-            <Glyph label="focus">
-              <Focus strokeWidth={2.6} className="h-full w-full" />
-            </Glyph>
-            you your time
+            that gives you your time
             <Glyph label="hourglass">
               <Hourglass strokeWidth={2.6} className="h-full w-full" />
             </Glyph>
             back
           </h1>
-          <div className="animate-fade-in-up animate-delay-200 mt-12">
+          <p className="animate-fade-in-up animate-delay-200 mt-8 max-w-[34ch] text-[18px] leading-relaxed text-neutral-500 sm:text-[20px]">
+            A free, ad-free minimal launcher for Android. A calm, text-only home screen that cuts distractions and screen time.
+          </p>
+          <div className="animate-fade-in-up animate-delay-200 mt-10">
             <DownloadButton />
           </div>
           <div className="animate-fade-in-up animate-delay-300 mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            <Badge top="Rated on Google Play" bottom="4.5 ★" />
+            <Badge top="Rated on Google Play" bottom="4.8 ★" />
             <Badge top="Loved by" bottom="2.5K+ reviewers" />
           </div>
         </section>
@@ -123,23 +132,8 @@ function App() {
         {/* Product panel */}
         <section className="px-3 sm:px-[72px]">
           <div className="mx-auto max-w-[1296px] rounded-[40px] bg-[#fafafa] px-4 pb-14 pt-20 sm:rounded-[56px] sm:pt-28">
-            <PhoneMockup theme={THEMES[themeIndex]} />
-            <div className="mt-12 flex flex-wrap justify-center gap-2" role="radiogroup" aria-label="Preview theme">
-              {THEMES.map((t, i) => (
-                <button
-                  key={t.id}
-                  role="radio"
-                  aria-checked={i === themeIndex}
-                  onClick={() => setThemeIndex(i)}
-                  className={`rounded-full px-4 py-2 text-[14px] font-semibold transition-colors ${
-                    i === themeIndex ? 'bg-black text-white' : 'bg-black/[0.05] text-neutral-500 hover:text-black'
-                  }`}
-                >
-                  {t.name}
-                </button>
-              ))}
-            </div>
-            <p className="mt-4 text-center text-[13px] text-neutral-400">12+ themes and 32+ fonts in the app. Tap to preview a few.</p>
+            <PhoneMockup />
+            <p className="mt-3 text-center text-[13px] text-neutral-500">12+ themes and 32+ fonts in the app. Here are a few.</p>
           </div>
         </section>
 
@@ -159,21 +153,27 @@ function App() {
           />
         </section>
 
+        <Features />
+
+        <Faq />
+
         <section className="flex justify-center px-4 pb-32">
           <DownloadButton />
         </section>
       </main>
 
       <footer className="pb-20 text-center">
-        <div className="text-[26px] font-bold tracking-tight text-neutral-200">Dino</div>
-        <nav className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 text-[17px] font-semibold text-neutral-400">
+        <div className="text-[26px] font-bold tracking-tight text-neutral-500">Dino Minimalist Launcher</div>
+        <nav className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 text-[17px] font-semibold text-neutral-500">
           <a href={PLAY_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Google Play</a>
           <span aria-hidden="true">•</span>
           <a href={ROADMAP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Roadmap</a>
           <span aria-hidden="true">•</span>
+          <a href="#faq" className="hover:text-black">FAQ</a>
+          <span aria-hidden="true">•</span>
           <a href={COMMUNITY_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Community</a>
         </nav>
-        <p className="mt-4 text-[14px] font-semibold text-neutral-300">
+        <p className="mt-4 text-[14px] font-semibold text-neutral-500">
           Crafted by{' '}
           <a href={AUTHOR_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">
             Dinoy

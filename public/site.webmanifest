@@ -1,0 +1,13 @@
+{
+  "name": "Dino Minimalist Launcher",
+  "short_name": "Dino",
+  "description": "A free, ad-free minimalist launcher for Android.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
