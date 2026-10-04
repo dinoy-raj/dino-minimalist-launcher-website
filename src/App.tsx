@@ -18,7 +18,6 @@ const DownloadButton: React.FC<{ size?: 'lg' | 'sm' }> = ({ size = 'lg' }) => (
     href={PLAY_URL}
     target="_blank"
     rel="noopener noreferrer"
-    aria-label="Get Dino Minimalist Launcher on Google Play"
     className={
       size === 'lg'
         ? 'inline-flex items-center gap-3 rounded-[18px] bg-black px-7 py-[18px] text-[17px] font-semibold text-white transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]'
@@ -48,8 +47,8 @@ const Badge: React.FC<{ top: string; bottom: string }> = ({ top, bottom }) => (
   <div className="flex items-center gap-2">
     <Laurel />
     <div className="text-center leading-tight">
-      <div className="text-[13px] font-medium text-neutral-400">{top}</div>
-      <div className="text-[20px] font-semibold tracking-tight text-neutral-400">{bottom}</div>
+      <div className="text-[13px] font-medium text-neutral-500">{top}</div>
+      <div className="text-[20px] font-semibold tracking-tight text-neutral-500">{bottom}</div>
     </div>
     <Laurel flip />
   </div>
@@ -76,7 +75,7 @@ function App() {
         }`}
       >
         <a href="#top" className="flex items-center gap-2.5 text-[22px] font-bold tracking-tight">
-          <img src="/favicon.svg" alt="" className="h-7 w-7" />
+          <img src="/favicon.svg" alt="" width={28} height={28} className="h-7 w-7 rounded-[7px]" />
           Dino
         </a>
         <nav className="flex items-center gap-2 sm:gap-6">
@@ -96,7 +95,17 @@ function App() {
       <main id="top">
         {/* Hero */}
         <section className="flex min-h-[88vh] flex-col items-center justify-center px-4 pb-16 pt-24 text-center">
-          <p className="animate-fade-in-up text-[18px] font-semibold tracking-tight sm:text-[22px]">Dino Minimalist Launcher</p>
+          <div className="animate-fade-in-up flex flex-col items-center gap-4">
+            <img
+              src="/icon-192.png"
+              alt="Dino Minimalist Launcher app icon"
+              width={72}
+              height={72}
+              fetchPriority="high"
+              className="h-[72px] w-[72px] rounded-[18px] shadow-[0_12px_30px_-10px_rgba(0,0,0,0.45)]"
+            />
+            <p className="text-[18px] font-semibold tracking-tight sm:text-[22px]">Dino Minimalist Launcher</p>
+          </div>
           <h1 className="animate-fade-in-up animate-delay-100 mt-6 max-w-[16ch] text-[44px] font-bold leading-[1.02] tracking-[-0.045em] sm:text-[72px] lg:text-[92px]">
             The minimalist launcher
             <Glyph label="text list">
@@ -124,7 +133,7 @@ function App() {
         <section className="px-3 sm:px-[72px]">
           <div className="mx-auto max-w-[1296px] rounded-[40px] bg-[#fafafa] px-4 pb-14 pt-20 sm:rounded-[56px] sm:pt-28">
             <PhoneMockup />
-            <p className="mt-3 text-center text-[13px] text-neutral-400">12+ themes and 32+ fonts in the app. Here are a few.</p>
+            <p className="mt-3 text-center text-[13px] text-neutral-500">12+ themes and 32+ fonts in the app. Here are a few.</p>
           </div>
         </section>
 
@@ -154,8 +163,8 @@ function App() {
       </main>
 
       <footer className="pb-20 text-center">
-        <div className="text-[26px] font-bold tracking-tight text-neutral-200">Dino Minimalist Launcher</div>
-        <nav className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 text-[17px] font-semibold text-neutral-400">
+        <div className="text-[26px] font-bold tracking-tight text-neutral-500">Dino Minimalist Launcher</div>
+        <nav className="mt-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 px-4 text-[17px] font-semibold text-neutral-500">
           <a href={PLAY_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Google Play</a>
           <span aria-hidden="true">•</span>
           <a href={ROADMAP_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Roadmap</a>
@@ -164,7 +173,7 @@ function App() {
           <span aria-hidden="true">•</span>
           <a href={COMMUNITY_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">Community</a>
         </nav>
-        <p className="mt-4 text-[14px] font-semibold text-neutral-300">
+        <p className="mt-4 text-[14px] font-semibold text-neutral-500">
           Crafted by{' '}
           <a href={AUTHOR_URL} target="_blank" rel="noopener noreferrer" className="hover:text-black">
             Dinoy

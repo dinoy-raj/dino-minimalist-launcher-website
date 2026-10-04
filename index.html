@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- App icon: the launcher's own logo -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/icon-192.png" as="image" fetchpriority="high" />
+    <meta name="application-name" content="Dino Minimalist Launcher">
+    <meta name="apple-mobile-web-app-title" content="Dino">
 
     <!-- SEO -->
     <title>Dino Minimalist Launcher – Minimal Android Home Screen</title>
@@ -32,22 +39,41 @@
     <meta name="twitter:description" content="A free, ad-free minimalist launcher for Android. A calm, text-only home screen that cuts distractions and screen time.">
     <meta name="twitter:image" content="https://minimalistlauncher.com/og-image.png">
 
-    <!-- Fonts: Inter for the page, the rest for the phone's theme previews -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&family=Doto:wght@700&display=swap">
-
     <!-- Structured data (the FAQ's lives next to it in the page body) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "Organization",
+          "@id": "https://minimalistlauncher.com/#organization",
+          "name": "Dino Minimalist Launcher",
+          "url": "https://minimalistlauncher.com/",
+          "logo": "https://minimalistlauncher.com/icon-512.png",
+          "founder": { "@type": "Person", "name": "Dinoy Raj", "url": "https://linktr.ee/dinoyraj" },
+          "sameAs": [
+            "https://play.google.com/store/apps/details?id=com.dino.simple",
+            "https://linktr.ee/simple.launcher"
+          ]
+        },
+        {
           "@type": "WebSite",
           "@id": "https://minimalistlauncher.com/#website",
           "name": "Dino Minimalist Launcher",
           "alternateName": ["Dino Launcher", "Simple Launcher"],
-          "url": "https://minimalistlauncher.com/"
+          "url": "https://minimalistlauncher.com/",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://minimalistlauncher.com/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://minimalistlauncher.com/#webpage",
+          "url": "https://minimalistlauncher.com/",
+          "name": "Dino Minimalist Launcher – Minimal Android Home Screen",
+          "isPartOf": { "@id": "https://minimalistlauncher.com/#website" },
+          "about": { "@id": "https://minimalistlauncher.com/#app" },
+          "primaryImageOfPage": "https://minimalistlauncher.com/og-image.png",
+          "inLanguage": "en"
         },
         {
           "@type": "SoftwareApplication",
@@ -57,6 +83,8 @@
           "description": "A free, ad-free minimalist launcher for Android: a calm, text-only minimal home screen with focus tools, an app blocker, themes and fonts to reduce screen time.",
           "url": "https://minimalistlauncher.com/",
           "image": "https://minimalistlauncher.com/og-image.png",
+          "screenshot": "https://minimalistlauncher.com/og-image.png",
+          "publisher": { "@id": "https://minimalistlauncher.com/#organization" },
           "applicationCategory": "LifestyleApplication",
           "applicationSubCategory": "Launcher",
           "operatingSystem": "Android 8.0 or later",
