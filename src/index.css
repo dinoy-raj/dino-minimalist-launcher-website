@@ -10,6 +10,47 @@
     U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Fallbacks sized to Inter's metrics, so text laid out before Inter arrives does not move when it
+   swaps in (layout shift). Values come from Inter's and each system font's own metrics, measured
+   per weight; Arial (with Helvetica and Liberation Sans as stand-ins) first, Roboto for Android. */
+@font-face {
+  font-family: 'Inter Fallback Arial';
+  font-weight: 400;
+  src: local('Arial'), local('ArialMT'), local('Helvetica'), local('Liberation Sans'), local('LiberationSans');
+  size-adjust: 107.17%;
+  ascent-override: 90.4%;
+  descent-override: 22.51%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback Arial';
+  font-weight: 700;
+  src: local('Arial Bold'), local('Arial-BoldMT'), local('Helvetica Bold'), local('Liberation Sans Bold'),
+    local('LiberationSans-Bold');
+  size-adjust: 101.91%;
+  ascent-override: 95.05%;
+  descent-override: 23.67%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback Roboto';
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular');
+  size-adjust: 106.97%;
+  ascent-override: 90.56%;
+  descent-override: 22.55%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: 'Inter Fallback Roboto';
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold');
+  size-adjust: 108.36%;
+  ascent-override: 89.4%;
+  descent-override: 22.26%;
+  line-gap-override: 0%;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,7 +61,7 @@ html {
 
 body {
   background: #fff;
-  font-family: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: 'Inter Variable', 'Inter Fallback Arial', 'Inter Fallback Roboto', sans-serif;
   font-feature-settings: 'ss01', 'cv11';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

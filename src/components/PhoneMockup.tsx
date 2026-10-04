@@ -97,7 +97,7 @@ const PhoneMockup: React.FC = () => {
           </div>
 
           {/* App list */}
-          <ul className="absolute inset-x-0 top-[45.6%] space-y-[4.25cqw] pl-[7.4cqw] pr-[7.9cqw]" style={{ fontFamily: "'Inter Variable', sans-serif" }}>
+          <ul className="absolute inset-x-0 top-[45.6%] space-y-[4.25cqw] pl-[7.4cqw] pr-[7.9cqw]" style={{ fontFamily: "'Inter Variable', 'Inter Fallback Arial', 'Inter Fallback Roboto', sans-serif" }}>
             {APPS.map((app) => (
               <li key={app.name} className="flex items-center leading-[4.4cqw]">
                 <span className={`mr-[3.8cqw] h-[0.9cqw] w-[0.9cqw] rounded-full ${fade}`} style={{ background: theme.muted }} />
