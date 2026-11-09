@@ -2,9 +2,11 @@
 /* eslint-disable react-refresh/only-export-components */
 import { StrictMode } from 'react';
 import { renderToString } from 'react-dom/server';
+import { GUIDES } from './content/guides';
+import { FAQ, FEATURES } from './content/site';
 import { PAGES, pageFor } from './routes.tsx';
 
-export { PAGES };
+export { FAQ, FEATURES, GUIDES, PAGES, pageFor };
 
 /** Renders a page to HTML at build time; see scripts/prerender.js. */
 export function render(path: string) {

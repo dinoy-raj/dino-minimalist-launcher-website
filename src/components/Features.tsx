@@ -16,6 +16,9 @@ const Features: React.FC = () => (
           <figure key={shot.src} className="w-[58%] shrink-0 snap-center sm:w-auto">
             <img
               src={shot.src}
+              // A 450px copy covers the phone layout (58% of the screen) and the four-across grid.
+              srcSet={`${shot.src.replace('.webp', '-450w.webp')} 450w, ${shot.src} 891w`}
+              sizes="(min-width: 640px) min(22vw, 290px), 58vw"
               alt={shot.alt}
               width={891}
               height={2000}

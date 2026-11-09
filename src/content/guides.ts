@@ -25,6 +25,123 @@ export type Guide = {
 
 export const GUIDES: Guide[] = [
   {
+    slug: 'what-is-a-minimalist-launcher',
+    title: 'What Is a Minimalist Launcher? A Plain Guide to Minimal Launchers',
+    h1: 'What is a minimalist launcher?',
+    description:
+      'A minimalist launcher replaces your Android home screen with a calm, text-only list of apps. What a minimal launcher does, who it helps, and how to choose one.',
+    published: '2026-11-09',
+    updated: '2026-11-09',
+    readingMinutes: 5,
+    intro: [
+      'A minimalist launcher is an Android app that replaces your home screen with something much quieter: a short, plain-text list of the apps you choose, instead of a grid of colourful icons, widgets and red notification badges. You will also see it called a minimal launcher, a text launcher or a minimalist home screen. They all mean the same thing.',
+      'The idea is simple. Most of what pulls you into your phone starts on the home screen. Take away the bright shapes and the badges, and opening an app becomes something you decide to do, not something that happens on autopilot.',
+    ],
+    sections: [
+      {
+        heading: 'What a launcher is',
+        paragraphs: [
+          'On Android, the launcher is the app that draws your home screen and app drawer. Your phone comes with one (Pixel Launcher, Samsung One UI Home and so on), but Android lets you replace it with any launcher from Google Play and switch back whenever you like. Changing the launcher does not touch your apps, photos or data; it only changes how they are shown to you.',
+        ],
+      },
+      {
+        heading: 'What a minimalist launcher changes',
+        bullets: [
+          'Words instead of icons: apps appear as a list of names in one font and one colour, so nothing competes for your attention.',
+          'Only what you pick: you choose the handful of apps that sit on the home screen. Everything else stays one search away.',
+          'No badges or feeds: no unread counters, no news cards, no suggested apps.',
+          'Fewer, smaller widgets: usually a clock and date, sometimes battery, weather or a short to-do list.',
+          'Monochrome or quiet themes: dark, light or a single accent colour, which makes the phone look less like a slot machine.',
+        ],
+      },
+      {
+        heading: 'Why people switch to a minimal launcher',
+        paragraphs: [
+          'The most common reason is screen time. Colourful icons and badges are designed to be noticed, and every glance is a chance to open something you did not plan to. A text-only home screen removes most of those cues, so people tend to unlock the phone, do the thing they came for and put it down.',
+          'Other reasons are simpler: a cleaner look, a phone that feels faster, or wanting the same calm setup on every device. A minimal launcher is also a gentle step for anyone curious about digital minimalism who does not want to give up a smartphone.',
+        ],
+      },
+      {
+        heading: 'What to look for when choosing one',
+        bullets: [
+          'Fast search: with fewer apps on screen, you will open most apps by typing a few letters, so search has to be instant.',
+          'Hide and pin apps: keep tools on the home screen and move distracting apps out of sight.',
+          'Focus tools: a pause before distracting apps, an app blocker or usage stats make the calm last beyond the first week.',
+          'Customisation that stays minimal: fonts, alignment and a few themes so it feels like yours without bringing the clutter back.',
+          'No ads and light on battery: a launcher runs all day, so it should be small, fast and free of ads.',
+          'Easy to undo: you should be able to switch back to your old home screen in a few taps.',
+        ],
+      },
+      {
+        heading: 'Dino Minimalist Launcher',
+        paragraphs: [
+          '[Dino Minimalist Launcher](/) is a free, ad-free minimalist launcher for Android 8.0 and newer. It gives you a text-first home screen with hidden and pinned apps, 12+ themes and 32+ fonts, minimal widgets, and focus tools built in: a mindful pause before the apps you choose, an app and site blocker, a notification filter and screen time insights.',
+          'If you want to try it, [here is how to change your default launcher](/guides/set-default-launcher-android), and how to switch back. For more ways to use your phone less, see [how to reduce screen time on Android](/guides/reduce-screen-time-on-android).',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'minimal-launcher-vs-stock-launcher',
+    title: 'Minimal Launcher vs Stock Launcher: What Actually Changes',
+    h1: 'Minimal launcher vs stock launcher: what actually changes',
+    description:
+      'How a minimal launcher compares with your phone’s stock Android launcher for focus, speed, battery, widgets and customisation, and when each one makes sense.',
+    published: '2026-11-09',
+    updated: '2026-11-09',
+    readingMinutes: 5,
+    intro: [
+      'Every Android phone ships with a stock launcher: Pixel Launcher on Pixel phones, One UI Home on Samsung, System Launcher on Xiaomi and so on. A minimal launcher, also called a minimalist launcher, replaces it with a plain-text home screen. Here is what actually changes when you switch, and what stays the same.',
+    ],
+    sections: [
+      {
+        heading: 'What stays the same',
+        paragraphs: [
+          'Your apps, notifications, settings, photos and accounts are untouched. Apps still open and work exactly as before, the notification shade and quick settings still come from Android, and you can go back to the stock launcher at any time from Settings → Apps → Default apps → Home app.',
+        ],
+      },
+      {
+        heading: 'The home screen',
+        paragraphs: [
+          'A stock launcher shows a grid of icons, folders and widgets, often with a news or discover feed one swipe away. A minimal launcher shows a short list of app names, usually with a clock and little else. The difference is mostly about what grabs your attention: icons, colours and badges on one side, plain words on the other.',
+        ],
+      },
+      {
+        heading: 'Focus and screen time',
+        paragraphs: [
+          'This is where a minimal launcher makes the biggest difference. Stock launchers are built to help you find and open apps quickly, which also makes it easy to open them without thinking. A minimal launcher adds a little friction: the apps you want to use less are not on screen, and many minimal launchers add tools such as a pause before an app opens, an app blocker or usage stats on the home screen.',
+          'Android’s own Digital Wellbeing works with both. A minimal launcher simply puts those habits where you see them every time you unlock the phone.',
+        ],
+      },
+      {
+        heading: 'Speed, memory and battery',
+        paragraphs: [
+          'A text-only home screen draws less than a page of icons, live widgets and animated wallpapers, so a well-made minimal launcher tends to feel quick, even on older phones. Battery savings are real but modest; the bigger saving usually comes from opening the phone less often.',
+        ],
+      },
+      {
+        heading: 'Widgets and customisation',
+        paragraphs: [
+          'Stock launchers support every home screen widget and icon pack. Minimal launchers deliberately offer less: usually their own small widgets (clock, date, battery, notes) plus fonts, themes, alignment and spacing. If your home screen depends on large widgets, a stock launcher, or a minimal launcher that allows a few widgets, will suit you better.',
+        ],
+      },
+      {
+        heading: 'Which one should you use?',
+        bullets: [
+          'Choose a minimal launcher if you want to spend less time on your phone, like a calm look, or keep opening apps on reflex.',
+          'Stay with the stock launcher if your home screen is built around big widgets, or you rely on features only your phone maker’s launcher offers.',
+          'Not sure? Try a minimal launcher for a week. Switching takes a minute and switching back takes less.',
+        ],
+      },
+      {
+        heading: 'Try a minimal launcher',
+        paragraphs: [
+          '[Dino Minimalist Launcher](/) is a free, ad-free minimal launcher with themes, fonts, minimal widgets and focus tools built in. Start with [what a minimalist launcher is](/guides/what-is-a-minimalist-launcher), or go straight to [setting it as your default launcher](/guides/set-default-launcher-android).',
+        ],
+      },
+    ],
+  },
+  {
     slug: 'reduce-screen-time-on-android',
     title: 'How to Reduce Screen Time on Android: 9 Steps That Work',
     h1: 'How to reduce screen time on Android',
@@ -79,7 +196,7 @@ export const GUIDES: Guide[] = [
       {
         heading: '7. Switch to a minimalist launcher',
         paragraphs: [
-          'A launcher is the app that draws your home screen. A minimalist launcher replaces the grid of colourful icons with a short, text-only list of the apps you choose, so there is nothing on screen designed to catch your eye.',
+          'A launcher is the app that draws your home screen. A [minimalist launcher](/guides/what-is-a-minimalist-launcher) replaces the grid of colourful icons with a short, text-only list of the apps you choose, so there is nothing on screen designed to catch your eye.',
           '[Dino Minimalist Launcher](/) is built for exactly this: a calm, text-first home screen, hidden apps, and themes and fonts so it still feels like yours. It is free on Google Play and has no ads. Switching takes about a minute, and you can switch back at any time; see [how to set a default launcher on Android](/guides/set-default-launcher-android).',
         ],
       },

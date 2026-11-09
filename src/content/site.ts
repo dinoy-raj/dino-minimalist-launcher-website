@@ -5,6 +5,23 @@ export const PLAY_URL = 'https://play.google.com/store/apps/details?id=com.dino.
 export const ROADMAP_URL = 'https://puzzle-kettle-30f.notion.site/Simple-Launcher-182b8c4aae1f80d8941df2086b1caf73';
 export const COMMUNITY_URL = 'https://linktr.ee/simple.launcher';
 export const AUTHOR_URL = 'https://linktr.ee/dinoyraj';
+export const APP_NAME = 'Dino Minimalist Launcher';
+
+/** The Google Play rating shown in the hero. Structured data reads it from here, so keep it current. */
+export const RATING = { value: '4.8', count: 2500, countLabel: '2.5K+' };
+
+/** The last significant change to the home page's content (sitemap lastmod). Update it with the copy. */
+export const HOME_UPDATED = '2026-11-09';
+
+/** The home page's search and social copy. */
+export const HOME_HEAD = {
+  title: 'Minimalist Launcher for Android | Dino – Free Minimal Launcher',
+  description:
+    'Dino is a free, ad-free minimalist launcher for Android: a minimal launcher with a calm, text-only home screen, focus tools, an app blocker and 12+ themes.',
+  social:
+    'A free, ad-free minimalist launcher for Android. A calm, text-only minimal home screen that cuts distractions and screen time.',
+  imageAlt: 'Dino Minimalist Launcher: a minimal, text-only Android home screen',
+};
 
 export const FEATURES: { title: string; body: string }[] = [
   {
@@ -45,6 +62,10 @@ export const FAQ: { q: string; a: string }[] = [
   {
     q: 'What is Dino Minimalist Launcher?',
     a: 'Dino is a minimalist launcher for Android: a minimal home screen that replaces the grid of colourful app icons with a calm, text-only list of the apps you choose. It is designed to reduce screen time and help you focus.',
+  },
+  {
+    q: 'Is a minimal launcher the same as a minimalist launcher?',
+    a: 'Yes. Minimal launcher and minimalist launcher are two names for the same kind of Android app: a home screen that shows a short, plain list of your apps instead of a grid of icons, widgets and badges. Read more in [what is a minimalist launcher](/guides/what-is-a-minimalist-launcher).',
   },
   {
     q: 'Is Dino the same app as Simple Launcher?',
