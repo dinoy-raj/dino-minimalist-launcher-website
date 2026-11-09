@@ -2,7 +2,7 @@
 
 [![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.dino.simple&pcampaignid=web_share)
 
-**Website:** [minimalistlauncher.com](https://minimalistlauncher.com) · **Guides:** [How to reduce screen time on Android](https://minimalistlauncher.com/guides/reduce-screen-time-on-android) · [How to change your default launcher](https://minimalistlauncher.com/guides/set-default-launcher-android)
+**Website:** [minimalistlauncher.com](https://minimalistlauncher.com) · **Guides:** [What is a minimalist launcher?](https://minimalistlauncher.com/guides/what-is-a-minimalist-launcher) · [Minimal launcher vs stock launcher](https://minimalistlauncher.com/guides/minimal-launcher-vs-stock-launcher) · [How to reduce screen time on Android](https://minimalistlauncher.com/guides/reduce-screen-time-on-android) · [How to change your default launcher](https://minimalistlauncher.com/guides/set-default-launcher-android)
 
 Dino Minimalist Launcher (formerly Simple Launcher) is a minimalist Android launcher designed to help you reduce screen time and boost focus. With a distraction-free, clutter-free interface, it offers complete customisation without compromising on Minimalist UI & simplicity & performance.
 

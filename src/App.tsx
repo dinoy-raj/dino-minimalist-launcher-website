@@ -9,6 +9,7 @@ import PhoneMockup from './components/PhoneMockup';
 import RevealText from './components/RevealText';
 import SiteFooter from './components/SiteFooter';
 import SiteHeader from './components/SiteHeader';
+import { APP_NAME, RATING } from './content/site';
 
 // Leaves placed along the left half of a circle, each tilted off the tangent.
 const LEAVES = [0, 1, 2, 3, 4, 5].map((i) => {
@@ -48,10 +49,11 @@ function App() {
           <div className="animate-rise flex flex-col items-center gap-4">
             <img
               src="/icon-192.png"
-              alt="Dino Minimalist Launcher app icon"
+              alt={`${APP_NAME} app icon`}
               width={72}
               height={72}
-              fetchPriority="high"
+              // React 18 only passes the lowercase attribute through to the HTML.
+              {...{ fetchpriority: 'high' }}
               className="h-[72px] w-[72px] rounded-[18px] shadow-[0_12px_30px_-10px_rgba(0,0,0,0.45)]"
             />
             <p className="text-[18px] font-semibold tracking-tight sm:text-[22px]">Dino Minimalist Launcher</p>
@@ -61,12 +63,12 @@ function App() {
           <h1 className="animate-rise animate-delay-100 mt-6 max-w-[16ch] text-[44px] font-bold leading-[1.02] tracking-[-0.045em] sm:text-[72px] lg:text-[92px] xl:max-w-none">
             The minimalist launcher
             <br className="hidden xl:inline" />
-            <Glyph label="text list">
+            <Glyph>
               <LayoutList strokeWidth={2.6} className="h-full w-full" />
             </Glyph>
             that gives you your
             <br className="hidden xl:inline" /> time
-            <Glyph label="hourglass">
+            <Glyph>
               <Hourglass strokeWidth={2.6} className="h-full w-full" />
             </Glyph>
             back
@@ -78,8 +80,8 @@ function App() {
             <DownloadButton />
           </div>
           <div className="animate-rise animate-delay-300 mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            <Badge top="Rated on Google Play" bottom="4.8 ★" />
-            <Badge top="Loved by" bottom="2.5K+ reviewers" />
+            <Badge top="Rated on Google Play" bottom={`${RATING.value} ★`} />
+            <Badge top="Loved by" bottom={`${RATING.countLabel} reviewers`} />
           </div>
         </section>
 
@@ -95,7 +97,7 @@ function App() {
         <section className="mx-auto max-w-[1040px] space-y-32 px-5 py-32 text-center sm:space-y-48 sm:py-48">
           <RevealText
             className={STATEMENT}
-            text="Dino swaps rows of colourful icons for a calm, text-first list of the apps you actually need."
+            text="Dino is a minimalist launcher that swaps rows of colourful icons for a calm, text-first list of the apps you actually need."
           />
           <RevealText
             className={STATEMENT}

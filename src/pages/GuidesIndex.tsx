@@ -15,8 +15,8 @@ const GuidesIndex: React.FC = () => (
           Guides to a calmer phone
         </h1>
         <p className="mt-6 max-w-[52ch] text-[19px] leading-relaxed text-neutral-500">
-          Practical, step-by-step help for spending less time on your Android phone and setting up a minimalist home
-          screen.
+          Practical, step-by-step help for spending less time on your Android phone and setting up a minimalist
+          launcher.
         </p>
         <div className="mt-14">
           <GuideCards />

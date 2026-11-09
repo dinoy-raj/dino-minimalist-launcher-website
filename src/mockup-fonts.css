@@ -1,0 +1,6 @@
+/* Space Grotesk and Doto set the text inside the phone mockup, below the fold. main.tsx loads this
+   file after the first paint so the fonts don't compete with the headline font and hero icon. */
+@import '@fontsource/space-grotesk/latin-400.css';
+@import '@fontsource/space-grotesk/latin-500.css';
+@import '@fontsource/space-grotesk/latin-700.css';
+@import '@fontsource/doto/latin-700.css';
